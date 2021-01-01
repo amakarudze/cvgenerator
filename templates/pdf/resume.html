@@ -1,0 +1,25 @@
+{% extends 'pdf/base.html' %}
+
+{% block content %}
+
+    <h2>{{ user_profile.name }}</h2>
+    <h3>{{ user_profile.email }}</h3>
+    <h3>{{ user_profile.phone }}</h3>
+    <hr/>
+    <br/>
+    <h4>Summary</h4>
+    <p>{{ user_profile.summary }}</p>
+    <hr/>
+    <h4>Skills</h4>
+    <p>{{ user_profile.skills }}</p>
+    <hr/>
+    <h4>Education</h4>
+    <ul>
+        <li>Schooling: {{ user_profile.school }}</li>
+        <li>{{ user_profile.degree }} from {{ user_profile.university }}</li>
+    </ul>
+    <hr/>
+    <h4>Previous Work</h4>
+    <p>{{ user_profile.previous_work }}</p>
+
+{% endblock %}

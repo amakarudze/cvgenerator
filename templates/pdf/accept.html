@@ -1,0 +1,56 @@
+{% extends 'pdf/base.html' %}
+
+{% block content %}
+
+        <div class="row">
+            <div class="col-md-7">
+                <h1>CV Generator</h1>
+                <h3 class="breadcrumb">Please enter your details</h3>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="summary">About You</label>
+                        <textarea class="form-control" id="summary" name="summary" placeholder="Enter a little about you"
+                                  rows="5"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="degree">Degree</label>
+                        <input type="text" class="form-control" id="degree" name="degree" placeholder="Enter degree">
+                    </div>
+                    <div class="form-group">
+                        <label for="school">School</label>
+                        <input type="text" class="form-control" id="school" name="school" placeholder="Enter school">
+                    </div>
+                    <div class="form-group">
+                        <label for="university">University</label>
+                        <input type="text" class="form-control" id="university" name="university" placeholder="Enter university">
+                    </div>
+                    <div class="form-group">
+                        <label for="previous_work">Previous Work</label>
+                        <textarea class="form-control" id="previous_work" name="previous_work" placeholder="Enter previous work"
+                                  rows="5"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="skills">Skills</label>
+                        <textarea class="form-control" id="skills" name="skills" placeholder="Enter skills" rows="5"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+{% endblock %}
